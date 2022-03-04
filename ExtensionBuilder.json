@@ -1,0 +1,106 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    159,
+                    193
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": false,
+                    "_default1_list": false,
+                    "_default2_show": false,
+                    "_default3_new_create": false,
+                    "_default4_edit_update": false,
+                    "_default5_delete": false,
+                    "customActions": [
+                        "display"
+                    ]
+                },
+                "name": "ActivityIndicator",
+                "objectsettings": {
+                    "addDeletedField": false,
+                    "addHiddenField": false,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "ActivityIndicator model",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1162236093442"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Activity of the Makerspace, where true -> Open, false -> Closed",
+                            "propertyIsExcludeField": false,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "activity",
+                            "propertyType": "Boolean",
+                            "uid": "1272194405858"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "An extension to display whether the TU-DO Makerspace is open.",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 10.4.0-10.4.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "generateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "10.4.0-10.4.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "activityindicator",
+        "name": "ActivityIndicator",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "",
+                "email": "ctx.xda@gmail.com",
+                "name": "Patrick Pedersen",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "ActivityIndicator => display",
+                    "noncacheableActions": "ActivityIndicator => display"
+                },
+                "description": "Plug-In to display whether the TU-DO Makerspace is open or closed.",
+                "key": "activityindicator",
+                "name": "ActivityIndicator"
+            }
+        ],
+        "vendorName": "TUDOMakerspace"
+    },
+    "wires": [],
+    "storagePath": "\/var\/www\/html\/typo3conf\/ext\/",
+    "log": {
+        "last_modified": "2022-03-04 05:50",
+        "extension_builder_version": "10.0.1",
+        "be_user": " (3)"
+    }
+}

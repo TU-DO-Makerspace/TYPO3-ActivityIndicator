@@ -1,0 +1,14 @@
+plugin.tx_activityindicator_activityindicator {
+    view {
+        # cat=plugin.tx_activityindicator_activityindicator/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:activityindicator/Resources/Private/Templates/
+        # cat=plugin.tx_activityindicator_activityindicator/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:activityindicator/Resources/Private/Partials/
+        # cat=plugin.tx_activityindicator_activityindicator/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:activityindicator/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_activityindicator_activityindicator//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<f:layout name="Default" />
+<f:section name="content">
+  <div style="text-align: center;">
+    <f:if condition="{activity}==1">
+      <f:then>
+        <div class="alert alert-success" role="alert">
+          The TU-DO is open
+        </div>
+      </f:then>
+      <f:else>
+        <div class="alert alert-danger" role="alert">
+          The TU-DO is closed
+        </div>
+      </f:else>
+    </f:if>
+  </div>
+  <i style="font-size:24px" class="fa">&#xf2c6;</i> Stay informed on Telegram: <a href="https://t.me/+MW8nzEwFLuFiOGE0" style="color:#0070ff"><b>t.me/+MW8nzEwFLuFiOGE0</b></a>
+</f:section>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_csh" date="2022-03-04T05:50:00Z" product-name="activityindicator">
+		<header/>
+		<body>
+			<trans-unit id="activity.description" resname="activity.description">
+				<source>Activity of the Makerspace, where true -&amp;gt; Open, false -&amp;gt; Closed</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
