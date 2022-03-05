@@ -1,8 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace TUDOMakerspace\Activityindicator\Tests\Unit\Domain\Model;
 
+use PHPUnit\Framework\MockObject\MockObject;
+use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 /**
@@ -13,17 +16,21 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class ActivityIndicatorTest extends UnitTestCase
 {
     /**
-     * @var \TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator
+     * @var \TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = new \TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator();
+
+        $this->subject = $this->getAccessibleMock(
+            \TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator::class,
+            ['dummy']
+        );
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
     }
@@ -31,25 +38,18 @@ class ActivityIndicatorTest extends UnitTestCase
     /**
      * @test
      */
-    public function getActivityReturnsInitialValueForBool()
+    public function getActivityReturnsInitialValueForBool(): void
     {
-        self::assertSame(
-            false,
-            $this->subject->getActivity()
-        );
+        self::assertFalse($this->subject->getActivity());
     }
 
     /**
      * @test
      */
-    public function setActivityForBoolSetsActivity()
+    public function setActivityForBoolSetsActivity(): void
     {
         $this->subject->setActivity(true);
 
-        self::assertAttributeEquals(
-            true,
-            'activity',
-            $this->subject
-        );
+        self::assertEquals(true, $this->subject->_get('activity'));
     }
 }

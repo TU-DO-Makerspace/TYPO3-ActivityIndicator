@@ -16,7 +16,7 @@ return [
         'iconfile' => 'EXT:activityindicator/Resources/Public/Icons/tx_activityindicator_domain_model_activityindicator.gif'
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, activity'],
+        '1' => ['showitem' => 'activity, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid, l10n_parent, l10n_diffsource'],
     ],
     'columns' => [
         'sys_language_uid' => [

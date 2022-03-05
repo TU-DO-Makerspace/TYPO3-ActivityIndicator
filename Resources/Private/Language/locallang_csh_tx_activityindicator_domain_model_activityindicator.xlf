@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_csh" date="2022-03-04T05:50:00Z" product-name="activityindicator">
+	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_csh_tx_activityindicator_domain_model_activityindicator.xlf" date="2022-03-05T20:38:04Z" product-name="activityindicator">
 		<header/>
 		<body>
 			<trans-unit id="activity.description" resname="activity.description">

@@ -66,6 +66,8 @@
             "disableLocalization": false,
             "disableVersioning": false,
             "generateDocumentationTemplate": false,
+            "generateEditorConfig": false,
+            "generateEmptyGitRepository": false,
             "sourceLanguage": "en",
             "state": "alpha",
             "targetVersion": "10.4.0-10.4.99",
@@ -73,8 +75,8 @@
         },
         "extensionKey": "activityindicator",
         "name": "ActivityIndicator",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "activityindicator",
+        "originalVendorName": "TUDOMakerspace",
         "persons": [
             {
                 "company": "",
@@ -97,10 +99,10 @@
         "vendorName": "TUDOMakerspace"
     },
     "wires": [],
-    "storagePath": "\/var\/www\/html\/typo3conf\/ext\/",
+    "storagePath": "\/var\/www\/html\/public\/typo3conf\/ext\/",
     "log": {
-        "last_modified": "2022-03-04 05:50",
-        "extension_builder_version": "10.0.1",
-        "be_user": " (3)"
+        "last_modified": "2022-03-05 08:38",
+        "extension_builder_version": "10.0.3",
+        "be_user": " (1)"
     }
 }

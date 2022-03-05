@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_db" date="2022-03-04T05:50:00Z" product-name="activityindicator">
+	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_db.xlf" date="2022-03-05T20:38:04Z" product-name="activityindicator">
 		<header/>
 		<body>
 			<trans-unit id="tx_activityindicator_domain_model_activityindicator" resname="tx_activityindicator_domain_model_activityindicator">
@@ -8,12 +8,6 @@
 			</trans-unit>
 			<trans-unit id="tx_activityindicator_domain_model_activityindicator.activity" resname="tx_activityindicator_domain_model_activityindicator.activity">
 				<source>Activity</source>
-			</trans-unit>
-			<trans-unit id="tx_activityindicator_activityindicator.name" resname="tx_activityindicator_activityindicator.name">
-				<source>ActivityIndicator</source>
-			</trans-unit>
-			<trans-unit id="tx_activityindicator_activityindicator.description" resname="tx_activityindicator_activityindicator.description">
-				<source>Plug-In to display whether the TU-DO Makerspace is open or closed.</source>
 			</trans-unit>
 		</body>
 	</file>

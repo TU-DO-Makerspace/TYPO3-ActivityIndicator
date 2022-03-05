@@ -1,7 +1,7 @@
 <?php
 defined('TYPO3_MODE') || die();
 
-call_user_func(static function() {
+(static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'Activityindicator',
         'Activityindicator',
@@ -40,4 +40,4 @@ call_user_func(static function() {
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:activityindicator/Resources/Public/Icons/user_plugin_activityindicator.svg']
     );
-});
+})();
