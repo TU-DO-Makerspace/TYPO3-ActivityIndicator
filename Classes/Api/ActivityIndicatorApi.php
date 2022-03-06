@@ -78,4 +78,22 @@ class ActivityIndicatorApi extends AbstractApi
             'activity' => "Closed",
         ];
     }
+
+    /**
+     *
+     * action getActivityAction
+     * Fetches the activity status from the repository
+     * and returns a JSON response with the activity status
+     *
+     * @Api\Access("public")
+     * 
+     * @return array
+     */
+    public function getActivityAction()
+    {
+        $activityIndicator = $this->activityIndicatorRepository->getActivityIndicator();
+        return [
+            'activity' => $activityIndicator->getActivity(),
+        ];
+    }
 }
