@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TUDOMakerspace\Activityindicator\Controller;
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 
 use TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator;
@@ -64,13 +63,7 @@ class ActivityIndicatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\Acti
      */
     public function displayAction()
     {
-
-        // Check if repo entry for the indicator exists
-        if ($this->activityIndicatorRepository->countAll() === 0) {
-            $this->activityIndicatorRepository->add(GeneralUtility::makeInstance(ActivityIndicator::class));
-            $this->persistenceManager->persistAll();
-        }
-        $activityIndicator = $this->activityIndicatorRepository->findAll()[0];
+        $activityIndicator = $this->activityIndicatorRepository->getActivityIndicator();
         $this->view->assign('activity', $activityIndicator->getActivity());
     }
 }
