@@ -38,18 +38,21 @@ class ActivityIndicatorTest extends UnitTestCase
     /**
      * @test
      */
-    public function getActivityReturnsInitialValueForBool(): void
+    public function getActivityReturnsInitialValueForString(): void
     {
-        self::assertFalse($this->subject->getActivity());
+        self::assertSame(
+            '',
+            $this->subject->getActivity()
+        );
     }
 
     /**
      * @test
      */
-    public function setActivityForBoolSetsActivity(): void
+    public function setActivityForStringSetsActivity(): void
     {
-        $this->subject->setActivity(true);
+        $this->subject->setActivity('Conceived at T3CON10');
 
-        self::assertEquals(true, $this->subject->_get('activity'));
+        self::assertEquals('Conceived at T3CON10', $this->subject->_get('activity'));
     }
 }

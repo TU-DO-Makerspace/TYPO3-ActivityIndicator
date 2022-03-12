@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace TUDOMakerspace\Activityindicator\Controller;
 
-use \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
-
+use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator;
 use TUDOMakerspace\Activityindicator\Domain\Repository\ActivityIndicatorRepository;
 
@@ -23,9 +22,10 @@ use TUDOMakerspace\Activityindicator\Domain\Repository\ActivityIndicatorReposito
  */
 class ActivityIndicatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
     /**
      * persistenceManager
-     * 
+     *
      * @var PersistenceManager
      */
     protected $persistenceManager = null;

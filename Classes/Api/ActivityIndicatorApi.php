@@ -47,23 +47,19 @@ class ActivityIndicatorApi extends AbstractApi
     /**
     * API action set
     *   
-    * Sets the activity status. Accepts "open" or "close" as arguments.
+    * Sets the activity status. Accepts "open" or "closed" as arguments.
     *
     * @Api\Route("POST /ActivityIndicator/activity/{activity}")
-    * @Api\Access("public")
+    * @Api\Access("fe_groups[api]")
     *
-    * @param string $activity "open" or "close"
+    * @param string $activity "open" or "closed"
     * @return Response response object with status code and optionally a message 
     */
     public function set( string $activity = null )
     {
-        if ( $activity != 'open' && $activity != 'close' )
-            return $this->response->invalid('"activity" must be "open" or "close"');
-
-        $this->activityIndicator->setActivity( $activity == 'open' ? true : false );
+        $this->activityIndicator->setActivity($activity);
         $this->activityIndicatorRepository->update($this->activityIndicator);
         $this->persistenceManager->persistAll();
-        
         return $this->response->success();
     }
 

@@ -7,7 +7,6 @@ namespace TUDOMakerspace\Activityindicator\Domain\Repository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
-
 use TUDOMakerspace\Activityindicator\Domain\Model\ActivityIndicator;
 
 /**
@@ -39,10 +38,9 @@ class ActivityIndicatorRepository extends \TYPO3\CMS\Extbase\Persistence\Reposit
     /**
      * Constructor
      * Initializes the table, if necessary
-     * 
+     *
      * @param ObjectManagerInterface $objectManager
      * @param PersistenceManager $persistenceManager
-     * 
      */
     public function __construct(ObjectManagerInterface $objectManager, PersistenceManager $persistenceManager)
     {
@@ -53,13 +51,13 @@ class ActivityIndicatorRepository extends \TYPO3\CMS\Extbase\Persistence\Reposit
 
     /**
      * Fetches the ActivityIndicator object from the DB table
-     * 
-     * If the repository is empty, it will be initialized with a 
+     *
+     * If the repository is empty, it will be initialized with a
      * ActivityIndicator object first
-     * 
+     *
      * @return ActivityIndicator
      */
-    public function getActivityIndicator() : ActivityIndicator
+    public function getActivityIndicator()
     {
         return $this->findAll()[0];
     }

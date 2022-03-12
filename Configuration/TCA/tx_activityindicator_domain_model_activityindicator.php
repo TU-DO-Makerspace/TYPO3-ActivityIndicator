@@ -12,7 +12,7 @@ return [
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'enablecolumns' => [
         ],
-        'searchFields' => '',
+        'searchFields' => 'activity',
         'iconfile' => 'EXT:activityindicator/Resources/Public/Icons/tx_activityindicator_domain_model_activityindicator.gif'
     ],
     'types' => [
@@ -60,16 +60,11 @@ return [
             'exclude' => false,
             'label' => 'LLL:EXT:activityindicator/Resources/Private/Language/locallang_db.xlf:tx_activityindicator_domain_model_activityindicator.activity',
             'config' => [
-                'type' => 'check',
-                'renderType' => 'checkboxToggle',
-                'items' => [
-                    [
-                        0 => '',
-                        1 => '',
-                    ]
-                ],
-                'default' => 0,
-            ]
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim,required',
+                'default' => ''
+            ],
         ],
     
     ],

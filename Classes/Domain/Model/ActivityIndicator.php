@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TUDOMakerspace\Activityindicator\Domain\Model;
 
-use \Nng\Nnrestapi\Domain\Model\AbstractRestApiModel;
+use Nng\Nnrestapi\Domain\Model\AbstractRestApiModel;
 
 /**
  * This file is part of the "ActivityIndicator" Extension for TYPO3 CMS.
@@ -17,21 +17,26 @@ use \Nng\Nnrestapi\Domain\Model\AbstractRestApiModel;
 
 /**
  * ActivityIndicator model
+ * 
+ * The ActvityIndicator model's purpose, is to simply store the activity status.
+ * The activity status is stored as a string, which is restricted to either "closed"
+ * or "open".
+ * 
  */
 class ActivityIndicator extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
-     * Activity of the Makerspace, where true -> Open, false -> Closed
+     * Activity of the Makerspace
      *
-     * @var bool
+     * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
-    protected $activity = false;
+    protected $activity = "closed";
 
     /**
      * Returns the activity
      *
-     * @return bool $activity
+     * @return string activity
      */
     public function getActivity()
     {
@@ -41,21 +46,14 @@ class ActivityIndicator extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the activity
      *
-     * @param bool $activity true -> Open, false -> Closed
+     * @param string $activity Must be either "closed" or "open"
      * @return void
      */
-    public function setActivity(bool $activity)
+    public function setActivity(string $activity)
     {
-        $this->activity = $activity;
-    }
+        if ($activity != "open" && $activity != "closed")
+            throw new \InvalidArgumentException("Activity must be either 'open' or 'closed'");
 
-    /**
-     * Returns the boolean state of activity
-     *
-     * @return bool
-     */
-    public function isActivity()
-    {
-        return $this->activity;
+        $this->activity = $activity;
     }
 }
