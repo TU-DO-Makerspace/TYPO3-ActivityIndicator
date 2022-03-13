@@ -5,12 +5,12 @@
     <f:if condition="{activity}=='open'">
       <f:then>
         <div class="alert alert-success" role="alert">
-          <h1>The TU-DO is open</h1>
+          <h1>{settings.activityindicator.opentext}</h1>
         </div>
       </f:then>
       <f:else>
         <div class="alert alert-danger" role="alert">
-          <h1>The TU-DO is closed</h1>
+          <h1>{settings.activityindicator.closedtext}</h1>
         </div>
       </f:else>
     </f:if>

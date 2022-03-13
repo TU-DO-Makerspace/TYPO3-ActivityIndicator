@@ -1,0 +1,36 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>ActivityIndicator Configuration</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.activityindicator.opentext>
+							<TCEforms>
+								<label>Open Text</label>
+								<config>
+									<type>input</type>
+									<eval>required</eval>
+									<default>Open</default>
+									<placeholder>Open</placeholder>
+								</config>
+							</TCEforms>
+					</settings.activityindicator.opentext>
+					<settings.activityindicator.closedtext>
+						<TCEforms>
+							<label>Closed Text</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+								<default>Closed</default>
+								<placeholder>Closed</placeholder>
+							</config>
+						</TCEforms>
+				</settings.activityindicator.closedtext>
+				</el>	
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
