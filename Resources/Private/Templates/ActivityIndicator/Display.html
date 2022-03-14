@@ -14,10 +14,14 @@
         </div>
       </f:else>
     </f:if>
-    Stay informed on Telegram:
-    <div class="tx-activityindicator-telegram-link">
-      <a href="https://t.me/+MW8nzEwFLuFiOGE0"><i class="fab fa-telegram" style="font-size: 120%"></i> <b>t.me/+MW8nzEwFLuFiOGE0</b> </a>
-    </div>
+    <f:if condition="{settings.activityindicator.telegram}!=''">
+      <f:then>
+        Stay informed on Telegram:
+        <div class="tx-activityindicator-telegram-link">
+          <a href="https://{settings.activityindicator.telegram}"><i class="fab fa-telegram" style="font-size: 120%"></i> <b>{settings.activityindicator.telegram}</b> </a>
+        </div>
+      </f:then>
+    </f:if>
   </div>
 </f:section>
 </html>
