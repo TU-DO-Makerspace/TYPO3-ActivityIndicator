@@ -1,5 +1,5 @@
 {
-    "name": "t-u-d-o-makerspace/activityindicator",
+    "name": "tudomakerspace/activityindicator",
     "type": "typo3-cms-extension",
     "description": "An extension to display whether the TU-DO Makerspace is open.",
     "authors": [
