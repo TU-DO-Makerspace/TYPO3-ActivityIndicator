@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="EXT:activityindicator/Resources/Private/Language/locallang_db.xlf" date="2022-03-11T23:49:11Z" product-name="activityindicator">
 		<header/>
 		<body>
+			<trans-unit id="tx_activityindicator_activityindicator.name" resname="tx_activityindicator_activityindicator.name">
+				<source>Activity Indicator</source>
+			</trans-unit>
+			<trans-unit id="tx_activityindicator_activityindicator.description" resname="tx_activityindicator_activityindicator.description">
+				<source>Extension for the TU-DO Activity Indicator</source>
+			</trans-unit>
 			<trans-unit id="tx_activityindicator_domain_model_activityindicator" resname="tx_activityindicator_domain_model_activityindicator">
 				<source>Activity Indicator</source>
 			</trans-unit>
