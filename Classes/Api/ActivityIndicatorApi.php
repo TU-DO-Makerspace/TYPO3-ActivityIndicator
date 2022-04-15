@@ -68,6 +68,7 @@ class ActivityIndicatorApi extends AbstractApi
      * API action get
      * Fetches the activity status from the repository
      * and returns a JSON response with the activity status
+     * and a unix timestamp of the last modification date.
      *
      * @Api\Route("GET /ActivityIndicator/activity")
      * @Api\Access("public")
@@ -78,6 +79,7 @@ class ActivityIndicatorApi extends AbstractApi
     {
         return [
             'activity' => $this->activityIndicator->getActivity(),
+            'tstamp' => $this->activityIndicator->getTstamp()
         ];
     }
 }
