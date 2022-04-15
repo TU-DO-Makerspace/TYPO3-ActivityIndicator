@@ -1,5 +1,11 @@
 .tx-activityindicator-content {
-  text-align: center;
+	text-align: center;
+}
+
+.tx-activityindicator-tstamp {
+	font-size: 0.8em;
+	color: #999;
+	margin-bottom: 10px;
 }
 
 .tx-activityindicator-telegram-link {

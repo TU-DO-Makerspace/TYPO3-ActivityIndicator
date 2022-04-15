@@ -55,9 +55,9 @@ class ActivityIndicatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\Acti
 
     /**
      * action display
-     * Fetches the activity status from the repository
-     * and displays it to the front-end via the Display.html
-     * template
+     * Fetches the activity status and the last modified time
+     * from the repository and displays it to the front-end via
+     * the Display.html template
      *
      * @return string|object|null|void
      */
@@ -65,5 +65,6 @@ class ActivityIndicatorController extends \TYPO3\CMS\Extbase\Mvc\Controller\Acti
     {
         $activityIndicator = $this->activityIndicatorRepository->getActivityIndicator();
         $this->view->assign('activity', $activityIndicator->getActivity());
+        $this->view->assign('tstamp', $activityIndicator->getTstampRelative());
     }
 }

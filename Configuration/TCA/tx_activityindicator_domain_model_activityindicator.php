@@ -66,6 +66,12 @@ return [
                 'default' => ''
             ],
         ],
-    
+
+        'tstamp' => [
+            'label' => 'tstamp',
+            'config' => [
+             'type' => 'passthrough',
+            ]
+        ],
     ],
 ];
