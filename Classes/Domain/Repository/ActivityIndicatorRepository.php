@@ -45,6 +45,10 @@ class ActivityIndicatorRepository extends \TYPO3\CMS\Extbase\Persistence\Reposit
     public function __construct(ObjectManagerInterface $objectManager, PersistenceManager $persistenceManager)
     {
         parent::__construct($objectManager);
+        $querySettings = $this->objectManager->get('TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings');
+        $querySettings->setRespectSysLanguage(FALSE);
+        $querySettings->setRespectStoragePage(FALSE);
+        $this->setDefaultQuerySettings($querySettings);
         parent::injectPersistenceManager($persistenceManager);
         $this->initTable();
     }
